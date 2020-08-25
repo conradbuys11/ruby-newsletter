@@ -36,6 +36,10 @@ def calculate_recipients
 end
 
 def first_n_articles(number_of_articles)
+  if number_of_articles > ARTICLES.length
+      puts "There are only #{ARTICLES.length} articles."
+      puts
+  end
   ARTICLES.first(number_of_articles)
 end
 
@@ -103,7 +107,13 @@ end
 
 # When we run "ruby newsletter.rb" in the command line,
 # the 'run' method will be called because we're calling it below.
-run(8)
+puts "Enter the number of articles you would like to view:"
+user_input = gets.chomp.to_i
+run(user_input)
+
 
 #1. What happens if we run more than we have?
 #2. Ask the user how many articles to print!
+  # a. ask for user user input 
+  # b. use input to call number of articles
+   
