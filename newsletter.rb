@@ -95,12 +95,15 @@ def print_newsletter(number)
   puts format_footer(CAMPUS)
 end
 
-def run
+def run(no_of_articles)
   # We want our program to print three articles by default,
   # but we can change that number here
-  print_newsletter(3)
+  print_newsletter(no_of_articles)
 end
 
 # When we run "ruby newsletter.rb" in the command line,
 # the 'run' method will be called because we're calling it below.
-run
+run(8)
+
+#1. What happens if we run more than we have?
+#2. Ask the user how many articles to print!
